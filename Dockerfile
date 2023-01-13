@@ -2,8 +2,7 @@ FROM maven:3-amazoncorretto-17
 
 LABEL maintainer="RADtech <info@radtechsoft.com>"
 
-RUN yum update -y 
-RUN yum install -y podman
+RUN amazon-linux-extras install docker
 RUN alias docker=podman
 RUN curl  -sSL https://sdk.cloud.google.com | bash
 
